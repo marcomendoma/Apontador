@@ -27,7 +27,7 @@ public class LocalidadeController {
 	@Autowired
 	LocalidadeService localidadeService;
 
-	@PostMapping
+	@PostMapping("/salvar")
 	public Localidade save(@RequestBody Localidade localidade) {
 		try {
 			localidade = localidadeService.save(localidade);
