@@ -1,0 +1,13 @@
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Grajau Center', '69 99936-9428', 'Rua Tarsila, 549');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Akalan Deposito de Mat. P/ construção', '87 98194-8806', 'Rua Padre Martinêz, 358');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'EMJN Desenvolvimento de Sistemas', '91 98116-7380','Rua Maria das Neves Rocha 749');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Eduardo Raimundo Ricardo Oliveira', '67 98875-9735','Rua B, 540');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Farma Viva - Farmacia de manipulação', '95 99453-6898','Rua Azaléias, 235');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Isabela Lorena Corte Real', '96 99196-9175','Travessa Gonzaguinha, 838');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Degaria dois Irmãos', '51 98344-7906','Rua Guaraú, 879');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Droga Raia São Sebastião', '95 99570-2622','Rua J-8, 994');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Padaria Sol Nascente', '61 98775-7832','Quadra Quadra 99');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Adega Vista Alegre', '21 99558-1007','Rua Gilberto José Peixoto');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Pizzaria São Bernardo', '11 99381-2742','Rua Roma, 786');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Doces Vilas Boas', '82 99735-9472','Rua T, 762');
+insert into localidade(id, nome, fone, endereco) values(seq_localidade.nextval, 'Pães e Doces Amarais', '85 99231-3456','Travessa Via Férrea, 546');
