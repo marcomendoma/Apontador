@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import LocalidadeService from "../../services/LocalidadeService";
 
 class LocalidadeCadastroComponent extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -22,9 +23,11 @@ class LocalidadeCadastroComponent extends Component {
       fone: this.state.fone,
       endereco: this.state.endereco
     };
-    LocalidadeService.salvar(localidade).then((res) => {
-      this.setState({ message: "Localidade adicionada com sucesso ." });
-      this.props.push(localidade);
+    LocalidadeService
+      .salvar(localidade)
+      .then((res) => {
+        this.setState({ message: "Localidade adicionada com sucesso ." });
+        this.props.push(localidade);
     });
   };
 
@@ -35,7 +38,6 @@ class LocalidadeCadastroComponent extends Component {
       <div>
         <form>
           <div className="form-group">
-            <label>Name do local:</label>
             <input
               type="text"
               placeholder="Nome do local"
@@ -47,7 +49,6 @@ class LocalidadeCadastroComponent extends Component {
           </div>
 
           <div className="form-group">
-            <label>Telefone:</label>
             <input
               type="text"
               placeholder="Telefone"
@@ -59,7 +60,6 @@ class LocalidadeCadastroComponent extends Component {
           </div>
 
           <div className="form-group">
-            <label>Endereço:</label>
             <input
               placeholder="Endereço"
               name="endereco"

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import MenuSuperior from './components/MenuSuperior/MenuSuperior';
-import { Cadastro, Consulta } from './components/Localidades';
+import Cadastro from './components/Localidades/LocalidadeCadastroComponent';
+import Consulta from './components/Localidades/LocalidadeListarComponent';
+
 import { Switch, Route } from 'react-router-dom';
 
 class App extends Component {

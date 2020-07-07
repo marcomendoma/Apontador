@@ -6,21 +6,23 @@ class LocalidadeListarComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            localidades: [],
-            message: null
+            localidades: []
         }
         this.adicionar = this.adicionar.bind(this);
         this.listar = this.listar.bind(this);
-    }
 
+    }
+    
     componentDidMount() {
         this.listar();
     }
 
     listar() {
-        LocalidadeService.listar()
+        LocalidadeService
+            .listar()
             .then((res) => {
                 this.setState({localidades: res.data.result})
+                console.log(res.data.result);
             });
     }
 
@@ -40,9 +42,9 @@ class LocalidadeListarComponent extends Component {
                             <table className="table">
                                 <tbody>
                                     { 
-                                        this.state.localidades.map(item => {
+                                        this.state.localidades.map((item, indice) => {
                                             return (
-                                                <tr key={item.id}>
+                                                <tr key={indice}>
                                                     <td>{item.nome}</td>
                                                     <td>{item.fone}</td>
                                                     <td>{item.endereco}</td>

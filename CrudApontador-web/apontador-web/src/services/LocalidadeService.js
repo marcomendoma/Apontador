@@ -15,7 +15,7 @@ class LocalidadeService {
     };
 
     salvar = data => {
-        return http.post("/", data);
+        return http.post("/salvar", data);
     };
 }
 
