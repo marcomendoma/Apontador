@@ -35,9 +35,9 @@ class LocalidadeCadastroComponent extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <form>
-          <div className="form-group">
+          <div className="form-group ">
             <input
               type="text"
               placeholder="Nome do local"
