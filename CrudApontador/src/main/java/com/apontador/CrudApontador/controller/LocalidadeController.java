@@ -19,7 +19,7 @@ import com.apontador.CrudApontador.domain.Localidade;
 import com.apontador.CrudApontador.service.LocalidadeService;
 
 @RestController
-@CrossOrigin("${origem-permitida}")
+//@CrossOrigin("${origem-permitida}")
 @RequestMapping("/localidades")
 public class LocalidadeController {
 	public static final Logger logger = LoggerFactory.getLogger(LocalidadeController.class);

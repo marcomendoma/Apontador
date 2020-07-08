@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import LocalidadeService from "../../services/LocalidadeService";
 import { listarLocalidades } from "../../services/consultas";
 
 import { Card, CardContent, Typography } from "@material-ui/core";
@@ -27,7 +26,9 @@ class LocalidadeListarComponent extends Component {
           return (
             <Card>
               <CardContent>
-                <Typography>{item.nome}</Typography>
+                <Typography>
+                  <strong>{item.nome}</strong>
+                </Typography>
                 <Typography>{item.fone}</Typography>
                 <Typography>{item.endereco}</Typography>
               </CardContent>

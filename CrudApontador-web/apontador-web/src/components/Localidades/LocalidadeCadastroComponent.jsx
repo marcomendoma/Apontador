@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import LocalidadeService from "../../services/LocalidadeService";
+import { TextField } from "@material-ui/core";
 
 class LocalidadeCadastroComponent extends Component {
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -21,13 +21,11 @@ class LocalidadeCadastroComponent extends Component {
       id: this.state.id,
       nome: this.state.nome,
       fone: this.state.fone,
-      endereco: this.state.endereco
+      endereco: this.state.endereco,
     };
-    LocalidadeService
-      .salvar(localidade)
-      .then((res) => {
-        this.setState({ message: "Localidade adicionada com sucesso ." });
-        this.props.push(localidade);
+    LocalidadeService.salvar(localidade).then((res) => {
+      this.setState({ message: "Localidade adicionada com sucesso ." });
+      //this.props.push(localidade);
     });
   };
 
@@ -35,47 +33,50 @@ class LocalidadeCadastroComponent extends Component {
 
   render() {
     return (
-      <div className="App">
-        <form>
-          <div className="form-group ">
-            <input
-              type="text"
-              placeholder="Nome do local"
-              name="nomelocal"
-              className="form-control"
-              value={this.state.nome}
-              onChange={this.onChange}
-            />
+      <div>
+        <form style={formContainer} >
+          <div>
+          <TextField
+            id="standard-basic"
+            label="Nome do local"
+            fullWidth margin="normal"
+            onChange={this.onChange}
+          />
+
           </div>
 
-          <div className="form-group">
-            <input
-              type="text"
-              placeholder="Telefone"
-              name="telefone"
-              className="form-control"
-              value={this.state.fone}
-              onChange={this.onChange}
-            />
-          </div>
+          <TextField
+            id="standard-basic"
+            label="Telefone"
+            fullWidth margin="normal"
+            onChange={this.onChange}
+          />
 
-          <div className="form-group">
-            <input
-              placeholder="Endereço"
-              name="endereco"
-              className="form-control"
-              value={this.state.endereco}
-              onChange={this.onChange}
-            />
-          </div>
-
+          <TextField
+            id="standard-basic"
+            label="Endereco"
+            fullWidth margin="normal"
+            //value={this.state.endereco}
+            onChange={this.onChange}
+          />
+        </form>
           <button className="btn btn-success" onClick={this.salvar}>
             Cadastrar
           </button>
-        </form>
       </div>
     );
   }
+}
+
+const formContainer = {
+  display: 'flex',
+  flexFlow: 'row wrap'
+};
+
+const style ={
+  display: 'flex',
+  justifyContent: 'center'
+
 }
 
 export default LocalidadeCadastroComponent;
