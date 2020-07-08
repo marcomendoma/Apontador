@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import LocalidadeService from "../../services/LocalidadeService";
+import { listarLocalidades } from "../../services/consultas";
 
 class LocalidadeListarComponent extends Component {
 
@@ -8,9 +9,6 @@ class LocalidadeListarComponent extends Component {
         this.state = {
             localidades: []
         }
-        this.adicionar = this.adicionar.bind(this);
-        this.listar = this.listar.bind(this);
-
     }
     
     componentDidMount() {
@@ -18,18 +16,7 @@ class LocalidadeListarComponent extends Component {
     }
 
     listar() {
-        LocalidadeService
-            .listar()
-            .then((res) => {
-                this.setState({localidades: res.data.result})
-                console.log(res.data.result);
-            });
-    }
-
-    adicionar() {
-        window.localStorage.removeItem("userId");
-        this.props.history.push('/add-user');
-        LocalidadeService.salvar()
+        listarLocalidades(dados => this.setState({localidades: dados}));
     }
 
     render(){
